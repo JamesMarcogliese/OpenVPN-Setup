@@ -8,12 +8,12 @@ GETTING STARTED
 Open your favorite Terminal and run these commands.
 
 1. Create a new bash script file:
-```sh
+```
 $ cat > ~/bin/OpenVPN_SetupScript.sh
 ```
-2. Paste the script into the terminal by clicking the middle mouse button and type Ctrl-d.
-3. Once it's saved, give it execute permissions like so:
-```sh
+    2. Paste the script into the terminal by clicking the middle mouse button and type Ctrl-d.
+    3. Once it's saved, give it execute permissions like so:
+```
 $ chmod +x ~/bin/OpenVPN_SetupScript.sh
 ```
 
