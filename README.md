@@ -1,6 +1,6 @@
 # OpenVPN-Setup
 
-An customized OpenVPN server on your Debian/Ubuntu machine is just a few clicks away! The script will lead you through install, Certificate Authority setup, server configuration, and client certificate setup in literally seconds.
+A customized OpenVPN server on your Debian/Ubuntu machine is just a few clicks away! The script will lead you through install, Certificate Authority setup, server configuration, and client certificate setup in literally seconds.
 
 GETTING STARTED
 ===============
