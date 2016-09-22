@@ -516,10 +516,8 @@ COMMIT\n\
    sed -i -e '/;mute 20/a key-direction 1' ~/client-configs/base.conf
    echo "Settings applied."
    echo "Creating configuration generation script..."
-   #touch ~/client-configs/make_config.sh
 
-cat << EOF > ~/client-configs/make_config.sh
-#!/bin/bash
+echo '#!/bin/bash
 
 # First argument: Client identifier
 
@@ -528,17 +526,16 @@ OUTPUT_DIR=~/client-configs/files
 BASE_CONFIG=~/client-configs/base.conf
 
 cat ${BASE_CONFIG} \
-    <(echo -e '<ca>') \
+    <(echo -e "'"<ca>"'") \
     ${KEY_DIR}/ca.crt \
-    <(echo -e '</ca>\n<cert>') \
+    <(echo -e '"'</ca>\n<cert>'"') \
     ${KEY_DIR}/${1}.crt \
-    <(echo -e '</cert>\n<key>') \
+    <(echo -e '"'</cert>\n<key>'"') \
     ${KEY_DIR}/${1}.key \
-    <(echo -e '</key>\n<tls-auth>') \
+    <(echo -e '"'</key>\n<tls-auth>'"') \
     ${KEY_DIR}/ta.key \
-    <(echo -e '</tls-auth>') \
-    > ${OUTPUT_DIR}/${1}.ovpn 
-EOF
+    <(echo -e "'"</tls-auth>"'") \
+    > ${OUTPUT_DIR}/${1}.ovpn' > ~/client-configs/make_config.sh
    chmod 755 ~/client-configs/make_config.sh
    echo "Configuration generation script created."
    client_configuration
