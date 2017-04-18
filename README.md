@@ -7,7 +7,7 @@ To see a full breakdown of steps used within the script, see [this simplified se
 GETTING STARTED
 ===============
 
-Open your favorite Terminal and run these commands:
+Clone the repo OR Open your favorite Terminal and run these commands:
 
 1. Create a new bash script file:
 
